@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
+import { Button, Container, Header } from 'semantic-ui-react'
+
 import logo from '../assets/logo.svg';
 import '../assets/styles/App.scss';
-import { Button, Container, Header } from 'semantic-ui-react'
+
+import NavContainer from './Nav';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <NavContainer />
         <Container>
           <Header as='h1'>Hello world!</Header>
           <Button
