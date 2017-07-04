@@ -1,35 +1,21 @@
 import React, { Component } from 'react';
-import { Button, Container, Header } from 'semantic-ui-react'
+import { Route, Switch } from 'react-router';
+import { ConnectedRouter } from 'react-router-redux';
 
-import logo from '../assets/logo.svg';
 import '../assets/styles/App.scss';
 
-import NavContainer from './Nav';
+import { history } from '../store';
 
-class App extends Component {
-  render() {
+import NotFound from '../components/NotFound';
+import Main from '../containers/Main';
+
+export default function () {
     return (
-      <div className="App">
-        <NavContainer />
-        <Container>
-          <Header as='h1'>Hello world!</Header>
-          <Button
-            content='Discover docs'
-            href='http://react.semantic-ui.com'
-            icon='github'
-            labelPosition='left'
-          />
-        </Container>
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcoe to React</h2>
-        </div>
-        <p className="App-intro">
-          To get strted, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <ConnectedRouter history={history}>
+       <Switch>
+         <Route exact path="/" component={Main} />
+         <Route component={NotFound} />
+       </Switch>
+      </ConnectedRouter>
     );
-  }
 }
-
-export default App;
