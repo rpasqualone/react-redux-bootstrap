@@ -8,7 +8,6 @@ import NavContainer from './Nav';
 
 export default class Main extends Component {
   render() {
-    console.log('test4');
     return (
       <div className="App">
         <NavContainer />
