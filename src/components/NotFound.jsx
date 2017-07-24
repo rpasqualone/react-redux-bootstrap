@@ -3,10 +3,31 @@ import { Grid } from 'semantic-ui-react'
 
 export default function() {
   return (
-    <div>
-      <Grid.Column mobile={16} tablet={8} computer={4}>
-        404
+    <Grid>
+      <Grid.Column olive mobile={16} tablet={8} computer={4}>
+        TEST
       </Grid.Column>
-    </div>
+      <Grid.Column mobile={16} tablet={8} computer={4}>
+        TEST
+      </Grid.Column>
+      <Grid.Column mobile={16} tablet={8} computer={4}>
+        TEST
+      </Grid.Column>
+      <Grid.Column mobile={16} tablet={8} computer={4}>
+        TEST
+      </Grid.Column>
+      <Grid.Column mobile={16} tablet={8} computer={4}>
+        TEST
+      </Grid.Column>
+      <Grid.Column mobile={16} tablet={8} computer={4}>
+        TEST
+      </Grid.Column>
+      <Grid.Column mobile={16} tablet={8} computer={4}>
+        TEST
+      </Grid.Column>
+      <Grid.Column mobile={16} tablet={8} computer={4}>
+        TEST
+      </Grid.Column>
+    </Grid>
   );
 }
