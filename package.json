@@ -29,21 +29,25 @@
     "dotenv": "4.0.0",
     "eslint": "3.19.0",
     "eslint-config-prettier": "^2.3.0",
-    "eslint-config-react-app": "^1.0.4",
+    "eslint-config-react-app": "^1.0.5",
     "eslint-loader": "1.7.1",
     "eslint-plugin-flowtype": "2.33.0",
     "eslint-plugin-import": "2.2.0",
-    "eslint-plugin-jsx-a11y": "5.0.3",
+    "eslint-plugin-jsx-a11y": "5.0.1",
+    "eslint-plugin-prettier": "^2.1.2",
     "eslint-plugin-react": "7.0.1",
     "extract-text-webpack-plugin": "2.1.0",
     "file-loader": "0.11.1",
     "fs-extra": "3.0.1",
     "html-webpack-plugin": "2.28.0",
+    "husky": "^0.14.3",
     "jest": "20.0.3",
+    "lint-staged": "^4.0.2",
     "node-sass": "^4.5.3",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.0.0",
     "postcss-loader": "2.0.5",
+    "prettier": "^1.5.3",
     "promise": "7.1.1",
     "react-dev-utils": "^3.0.0",
     "react-error-overlay": "^1.0.7",
@@ -57,10 +61,17 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
+    "precommit": "lint-staged",
     "serve": "node scripts/start.js",
     "start": "npm run serve",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
   },
   "jest": {
     "collectCoverageFrom": [
