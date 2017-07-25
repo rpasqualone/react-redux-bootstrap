@@ -13,14 +13,14 @@ import App from './containers/App';
 import NotFound from './components/NotFound';
 
 render(
-  <Provider store={store}>
-    <ConnectedRouter history={history}>
-      <Switch>
-        <Route exact path="/" component={App} />
-        <Route component={NotFound} />
-      </Switch>
-    </ConnectedRouter>
-  </Provider>,
-  document.getElementById('root')
+	<Provider store={store}>
+		<ConnectedRouter history={history}>
+			<Switch>
+				<Route exact path="/" component={App} />
+				<Route component={NotFound} />
+			</Switch>
+		</ConnectedRouter>
+	</Provider>,
+	document.getElementById('root')
 );
 registerServiceWorker();
