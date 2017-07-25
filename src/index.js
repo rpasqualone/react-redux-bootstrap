@@ -15,11 +15,12 @@ import NotFound from './components/NotFound';
 render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-     <Switch>
-       <Route exact path="/" component={App} />
-       <Route component={NotFound} />
-     </Switch>
+      <Switch>
+        <Route exact path="/" component={App} />
+        <Route component={NotFound} />
+      </Switch>
     </ConnectedRouter>
-  </Provider>, document.getElementById('root')
+  </Provider>,
+  document.getElementById('root')
 );
 registerServiceWorker();

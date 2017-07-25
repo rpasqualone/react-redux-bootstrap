@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Container, Header } from 'semantic-ui-react'
+import { Button, Container, Header } from 'semantic-ui-react';
 
 import logo from '../assets/logo.svg';
 import '../assets/styles/App.scss';
@@ -12,12 +12,12 @@ class App extends Component {
       <div className="App">
         <NavContainer />
         <Container>
-          <Header as='h1'>Hello world!</Header>
+          <Header as="h1">Hello world!</Header>
           <Button
-            content='Discover docs'
-            href='http://react.semantic-ui.com'
-            icon='github'
-            labelPosition='left'
+            content="Discover docs"
+            href="http://react.semantic-ui.com"
+            icon="github"
+            labelPosition="left"
           />
         </Container>
         <div className="App-header">
