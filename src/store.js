@@ -22,6 +22,18 @@ if (process.env.NODE_ENV === 'development') {
 
 const composedEnhancers = compose(applyMiddleware(...middleware), ...enhancers);
 
-const store = createStore(rootReducer, initialState, composedEnhancers);
+const configureStore = () => {
+	const store = createStore(rootReducer, initialState, composedEnhancers);
 
-export default store;
+	// if (process.env.NODE_ENV !== "production") {
+	// 	if (module.hot) {
+	// 		module.hot.accept('./reducers', () => {
+	// 			store.replaceReducer(rootReducer, initialState, composedEnhancers)
+	// 		})
+	// 	}
+	// }
+
+	return store;
+};
+
+export default configureStore();
