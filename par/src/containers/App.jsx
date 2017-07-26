@@ -18,7 +18,7 @@ class App extends Component {
 					<ConnectedRouter history={history}>
 						<Switch>
 							<Route exact path="/" component={Main} />
-							      <Route component={NotFound} />
+							       <Route component={NotFound} />
 						</Switch>
 					</ConnectedRouter>
 				</Provider>
