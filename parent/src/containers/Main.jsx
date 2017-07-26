@@ -13,7 +13,7 @@ export default class Main extends Component {
 				<NavContainer />
 				<Container>
 					<Header as="h1">Hello world!</Header>
-					<Button content="Discover docs" href="http://react.semantic-ui.com" icon="github" labelPosition="left" />
+					   <Button content="Discover docs" href="http://react.semantic-ui.com" icon="github" labelPosition="left" />
 				</Container>
 				<div className="App-header">
 					<img src={logo} className="App-logo" alt="logo" />
