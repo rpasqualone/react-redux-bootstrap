@@ -16,7 +16,7 @@ class App extends Component {
       <AppContainer>
         <Provider store={store}>
           <ConnectedRouter history={history}>
-                           <Switch>
+            <Switch>
               <Route exact path="/" component={Main} />
               <Route component={NotFound} />
             </Switch>

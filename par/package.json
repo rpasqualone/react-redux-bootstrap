@@ -71,7 +71,7 @@
 	"lint-staged": {
 		"gitDir": "../",
 		"linters": {
-			"par/src/**/*.jsx": "prettier --write"
+			"par/src/**/*.jsx": ["prettier --write", "git add"]
 		}
 	},
 	"jest": {
