@@ -69,6 +69,7 @@
     "format": "prettier --write --single-quote --print-width=120 --use-tabs \"src/**/*.{js,jsx}\""
   },
   "lint-staged": {
+    "gitDir": "../",
     "src/**/*.{js,jsx,json,css}": [
       "prettier --single-quote --write --print-width=120 --use-tabs",
       "git add"
