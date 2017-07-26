@@ -70,10 +70,12 @@
   },
   "lint-staged": {
     "gitDir": "../",
-    "*/src/**/*.{js,jsx,json,css}": [
-      "prettier --single-quote --write --print-width=120 --use-tabs",
-      "git add"
-    ]
+    "linters": {
+      "*/src/**/*.{js,jsx,json,css}": [
+        "prettier --single-quote --write --print-width=120 --use-tabs",
+        "git add"
+      ]
+    }
   },
   "jest": {
     "collectCoverageFrom": [
