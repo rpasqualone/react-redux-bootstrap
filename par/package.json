@@ -71,7 +71,7 @@
 	"lint-staged": {
 		"gitDir": "../",
 		"linters": {
-			"*.{js,jsx,json,css}": ["prettier --single-quote --write --print-width=120 --use-tabs", "git add"]
+			"par/src/**/*.jsx": "prettier --write"
 		}
 	},
 	"jest": {
