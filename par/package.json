@@ -70,7 +70,7 @@
   },
   "lint-staged": {
     "gitDir": "../",
-    "src/**/*.{js,jsx,json,css}": [
+    "par/src/**/*.{js,jsx,json,css}": [
       "prettier --single-quote --write --print-width=120 --use-tabs",
       "git add"
     ]
