@@ -66,6 +66,7 @@
   },
   "scripts": {
     "precommit": "CI=true lint-staged",
+    "postcommit": "git reset",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
