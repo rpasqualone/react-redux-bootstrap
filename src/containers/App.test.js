@@ -20,7 +20,7 @@ describe('App Component', () => {
 	describe('method someMethod', () => {
 		it('returns appropriate string', () => {
 			const wrapper = shallow(<App />);
-			expect(wrapper.instance().someMethod()).toEqual('Some string');
+			expect(wrapper.instance().someMethod()).toEqual('Some strings');
 		});
 	});
 });
