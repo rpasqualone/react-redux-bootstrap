@@ -1,3 +1,16 @@
 {
-	"extends": "react-app"
+	"extends": "react-app",
+	"rules": {
+		/**
+		 * Variables
+		 */
+		"no-var": 2,
+		"no-unused-vars": 1,
+		"prefer-const": 1,
+		"vars-on-top": 1,
+		"no-use-before-define": 0,
+		"no-restricted-globals": 0,
+		"jsx-a11y/href-no-hash": 0,
+		"jsx-a11y/anchor-is-valid": 0
+	}
 }

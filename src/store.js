@@ -25,13 +25,13 @@ const composedEnhancers = compose(applyMiddleware(...middleware), ...enhancers);
 const configureStore = () => {
 	const store = createStore(rootReducer, initialState, composedEnhancers);
 
-	// if (process.env.NODE_ENV !== "production") {
-	// 	if (module.hot) {
-	// 		module.hot.accept('./reducers', () => {
-	// 			store.replaceReducer(rootReducer, initialState, composedEnhancers)
-	// 		})
-	// 	}
-	// }
+	if (process.env.NODE_ENV !== 'production') {
+		if (module.hot) {
+			module.hot.accept('./reducers', () => {
+				store.replaceReducer(rootReducer, initialState, composedEnhancers);
+			});
+		}
+	}
 
 	return store;
 };

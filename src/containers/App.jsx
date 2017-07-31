@@ -11,7 +11,12 @@ import Main from './Main';
 import '../assets/styles/App.scss';
 
 class App extends Component {
+	someMethod() {
+		return 'Some string';
+	}
+
 	render() {
+		this.someMethod();
 		return (
 			<AppContainer>
 				<Provider store={store}>
