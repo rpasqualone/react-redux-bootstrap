@@ -65,9 +65,9 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
-    "precommit": "CI=true lint-staged",
+    "precommit": "lint-staged",
     "postcommit": "if [ \"$IDE_ENV\" = \"intellij\" ]; git reset; fi",
-    "prepush": "echo this is where we test",
+    "prepush": "CI=true node scripts/test.js --env=jsdom --bail",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
