@@ -12,7 +12,7 @@ import '../assets/styles/App.scss';
 
 class App extends Component {
 	someMethod() {
-		return 'Some string';
+		return 'Some strings';
 	}
 
 	render() {
