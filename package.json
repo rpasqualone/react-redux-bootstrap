@@ -66,7 +66,8 @@
   },
   "scripts": {
     "precommit": "CI=true lint-staged",
-    "postcommit": "git reset",
+    "postcommit": "if [ \"$IDE_ENV\" = \"intellij\" ]; git reset; fi",
+    "prepush": "echo this is where we test",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
