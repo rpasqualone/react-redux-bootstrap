@@ -2,6 +2,22 @@
   "name": "ui",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "precommit": "lint-staged",
+    "postcommit": "if [ \"$IDE_ENV\" = \"intellij\" ]; git reset; fi",
+    "prepush": "CI=true node scripts/test.js --env=jsdom --bail",
+    "start": "node scripts/start.js",
+    "build": "node scripts/build.js",
+    "stage": "node scripts/stage.js",
+    "test": "node scripts/test.js --env=jsdom",
+    "format": "prettier --write --single-quote --print-width=120 --use-tabs \"src/**/*.{js,jsx}\""
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --single-quote --write --print-width=120 --use-tabs",
+      "git add"
+    ]
+  },
   "dependencies": {
     "axios": "^0.16.2",
     "react": "^15.6.1",
@@ -63,21 +79,6 @@
     "webpack-dev-server": "2.4.5",
     "webpack-manifest-plugin": "1.1.0",
     "whatwg-fetch": "2.0.3"
-  },
-  "scripts": {
-    "precommit": "lint-staged",
-    "postcommit": "if [ \"$IDE_ENV\" = \"intellij\" ]; git reset; fi",
-    "prepush": "CI=true node scripts/test.js --env=jsdom --bail",
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom",
-    "format": "prettier --write --single-quote --print-width=120 --use-tabs \"src/**/*.{js,jsx}\""
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
-      "prettier --single-quote --write --print-width=120 --use-tabs",
-      "git add"
-    ]
   },
   "jest": {
     "collectCoverageFrom": [
